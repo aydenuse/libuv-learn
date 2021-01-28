@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/idle.c
+stdio.h
+-
+uv.h
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/uv.h
+

@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/PipeHandle.dir/src/pipe/pipe.c.o  -o PipeHandle  -L/Users/linxiaowu/Github/libuv/out/Debug -Wl,-rpath,/Users/linxiaowu/Github/libuv/out/Debug -luv 

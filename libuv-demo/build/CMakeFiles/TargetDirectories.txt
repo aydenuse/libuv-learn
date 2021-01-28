@@ -1,0 +1,12 @@
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/edit_cache.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/PipeHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/DNSHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/ThreadHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/UdpHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/WorkerHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/FsHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/IdleHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/ProcessHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/TcpHandle.dir
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/build/CMakeFiles/HelloUv.dir

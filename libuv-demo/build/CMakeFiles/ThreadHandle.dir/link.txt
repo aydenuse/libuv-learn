@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/ThreadHandle.dir/src/thread.c.o  -o ThreadHandle  -L/Users/linxiaowu/Github/libuv/out/Debug -Wl,-rpath,/Users/linxiaowu/Github/libuv/out/Debug -luv 

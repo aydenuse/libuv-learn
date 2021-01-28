@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/FsHandle.dir/src/fs.c.o  -o FsHandle  -L/Users/linxiaowu/Github/libuv/out/Debug -Wl,-rpath,/Users/linxiaowu/Github/libuv/out/Debug -luv 

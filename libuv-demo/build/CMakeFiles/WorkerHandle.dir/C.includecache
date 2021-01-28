@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/common.h
+stdlib.h
+-
+stdio.h
+-
+time.h
+-
+uv.h
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/uv.h
+
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/pipe/worker.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+assert.h
+-
+uv.h
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/pipe/uv.h
+../common.h
+/mnt/d/Ayden/practice/algorithm-practice/libuv-demo/src/common.h
+

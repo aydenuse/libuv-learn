@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/TcpHandle.dir/src/tcpserver.c.o  -o TcpHandle  -L/Users/linxiaowu/Github/libuv/out/Debug -Wl,-rpath,/Users/linxiaowu/Github/libuv/out/Debug -luv 

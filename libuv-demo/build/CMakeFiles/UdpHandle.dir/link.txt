@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/UdpHandle.dir/src/udpserver.c.o  -o UdpHandle  -L/Users/linxiaowu/Github/libuv/out/Debug -Wl,-rpath,/Users/linxiaowu/Github/libuv/out/Debug -luv 
