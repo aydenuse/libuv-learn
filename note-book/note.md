@@ -23,6 +23,7 @@ libuv 线程池同步原理：
 #### Run
 ##### 2021-01-28
 
+---
 * [x] 为什么结构体都要 typedef 一下？
 ```c
 // 因为声明变量要这样：
@@ -36,6 +37,7 @@ struct uv_loop_s *loop = uv_default_loop();
 
 typedef 这样的形式可以少写个 "struct"，`_s` 和 `_t` 分别是 `struct` 和 `typedef` 的缩写，不是必须，约定俗成而已。
 
+---
 * [x]  为什么使用 `do while(0)`
 ```c++
 #define uv__handle_ref(h)                                                     \
@@ -50,6 +52,7 @@ typedef 这样的形式可以少写个 "struct"，`_s` 和 `_t` 分别是 `struc
 `do while` 是为了避免在使用宏定义的时候造成语句歧义，具体可以看[这个](https://www.cnblogs.com/flying_bat/archive/2008/01/18/1044693.html)，引用作者一句话：
 > 诚然，这是一个好的，应该提倡的编程习惯，但一般这样的宏都是作为library的一部分出现的，而对于一个library的作者，他所要做的就是让其库具有通用性，强壮性，因此他不能有任何对库的使用者的假设，如其编码规范，技术水平等。
 
+---
 * [x] 高效队列的实现
 ```c++
 typedef void *QUEUE[2];
@@ -60,14 +63,22 @@ typedef void *QUEUE[2];
 #define QUEUE_NEXT_PREV(q)  (QUEUE_PREV(QUEUE_NEXT(q)))
 ```
 
+---
 * [x] 函数声明，没有定义
 ```c++
 void uv__prepare_close(uv_prepare_t* handle);
 ```
 
+---
 * [x] 线程同步锁
+
+---
 * [x] 条件变量
+
+---
 * [ ] 命名 `__` 作为连接的和 `_` 作为连接的有什么区别？
+
+---
 * [ ] 代码
 
 ```c++
@@ -83,4 +94,5 @@ void uv__make_close_pending(uv_handle_t* handle) {
 }
 ```
 
+---
 * [x] AsyncCall 和 SyncCall 这两个方法是在哪里声明的呢？
