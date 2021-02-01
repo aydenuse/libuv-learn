@@ -81,6 +81,6 @@ void uv__make_close_pending(uv_handle_t* handle) {
    handle->next_closing = handle->loop->closing_handles;
    handle->loop->closing_handles = handle;
 }
-
-
 ```
+
+* [x] AsyncCall 和 SyncCall 这两个方法是在哪里声明的呢？

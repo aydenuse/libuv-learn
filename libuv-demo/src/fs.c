@@ -81,7 +81,16 @@ int main() {
 
   int r = 0;
   // 首先先打开文件
+
+
+
+
   r = uv_fs_open(loop, open_req, filename, O_RDONLY, S_IRUSR, open_cb);
+
+
+
+
+  
   CHECK(r, "uv_fs_open");
 
   uv_run(loop, UV_RUN_DEFAULT);
