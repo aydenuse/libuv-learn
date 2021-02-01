@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "uv.h": "c"
+        "uv.h": "c",
+        "queue": "c"
     }
 }

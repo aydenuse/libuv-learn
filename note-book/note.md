@@ -17,14 +17,13 @@ libuv 线程池同步原理：
 1.  互斥锁（mutex lock） 线程同步原理，线程初始化过程中会初始化一个全局的互斥锁
 2.  文件读写锁
 3.  信号量
-4.  条件变量
+4.  条件变量(cond)
 5.  屏障
 
 #### Run
 ##### 2021-01-28
 
 * [x] 为什么结构体都要 typedef 一下？
-
 ```c
 // 因为声明变量要这样：
 struct 结构体名 变量名
@@ -35,6 +34,35 @@ uv_loop_t *loop = uv_default_loop();
 struct uv_loop_s *loop = uv_default_loop();
 ```
 typedef 这样的形式可以少写个 "struct"，`_s` 和 `_t` 分别是 `struct` 和 `typedef` 的缩写，不是必须，约定俗成而已。
-* [ ] 
 
+* [x]  为什么使用 `do while(0)`
+```c++
+#define uv__handle_ref(h)                                                     \
+  do {                                                                        \
+    if (((h)->flags & UV_HANDLE_REF) != 0) break;                             \
+    (h)->flags |= UV_HANDLE_REF;                                              \
+    if (((h)->flags & UV_HANDLE_CLOSING) != 0) break;                         \
+    if (((h)->flags & UV_HANDLE_ACTIVE) != 0) uv__active_handle_add(h);       \
+  }                                                                           \
+  while (0)
+``` 
+`do while` 是为了避免在使用宏定义的时候造成语句歧义，具体可以看[这个](https://www.cnblogs.com/flying_bat/archive/2008/01/18/1044693.html)，引用作者一句话：
+> 诚然，这是一个好的，应该提倡的编程习惯，但一般这样的宏都是作为library的一部分出现的，而对于一个library的作者，他所要做的就是让其库具有通用性，强壮性，因此他不能有任何对库的使用者的假设，如其编码规范，技术水平等。
 
+* [x] 高效队列的实现
+```c++
+typedef void *QUEUE[2];
+
+#define QUEUE_NEXT(q)       (*(QUEUE **) &((*(q))[0]))
+#define QUEUE_PREV(q)       (*(QUEUE **) &((*(q))[1]))
+#define QUEUE_PREV_NEXT(q)  (QUEUE_NEXT(QUEUE_PREV(q)))
+#define QUEUE_NEXT_PREV(q)  (QUEUE_PREV(QUEUE_NEXT(q)))
+```
+
+* [x] 函数声明，没有定义
+```c++
+void uv__prepare_close(uv_prepare_t* handle);
+```
+
+* [x] 线程同步锁
+* [x] 条件变量
