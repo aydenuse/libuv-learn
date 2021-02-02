@@ -96,7 +96,17 @@ void uv__make_close_pending(uv_handle_t* handle) {
 
 ---
 * [x] AsyncCall 和 SyncCall 这两个方法是在哪里声明的呢？
+<<<<<<< HEAD
 头文件里
 
 ---
 * [] 
+=======
+找到了
+
+* [x] v8 isolate_ 是什么
+
+* [x] libuv以二叉堆的形式维护了超时任务节点
+
+
+>>>>>>> 20e3d82005f5e9dffca706f10705b24b2e17a184
