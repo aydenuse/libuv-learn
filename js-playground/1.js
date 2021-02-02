@@ -1,6 +1,5 @@
-'use strict';
-const fs = require('fs');
-
-fs.open(__dirname + '/test.txt', 'r', '0666', function (err, fd) {
-    console.log(fd);
-});
+setTimeout(() => console.log(1)); 
+setImmediate(() => console.log(2));
+process.nextTick(() => console.log(3));
+Promise.resolve().then(() => console.log(4));
+(() => console.log(5))();
