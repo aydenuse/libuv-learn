@@ -16,3 +16,4 @@ fs.open('test.txt', 'r', '0666', function (err, fd) {
     console.log(3, fs.readdirSync('/dev/fd').length);
 
 });
+
