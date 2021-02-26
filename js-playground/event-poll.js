@@ -87,3 +87,4 @@ linklList.insert(n1)
 
 linklList.insert(1, 4)
 console.log(linklList)
+

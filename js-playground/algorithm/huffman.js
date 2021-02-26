@@ -1,14 +1,4 @@
 /**
- * 哈夫曼树节点
- */
-class Node {
-    constructor(val = {}, left = null, right = null) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-/**
  * 定义与原理：
  * - 节点的路径长度
  * 从根节点到该节点的路径上的连接数
@@ -26,6 +16,23 @@ class Node {
  * 单个编码的长度不一致，可以根据整体出现的频率来调节
  * - 前缀码
  * 所谓的前缀码，就是没有任何码字是其他码字的前缀
+ */
+
+
+
+/**
+ * 哈夫曼树节点
+ */
+class Node {
+    constructor(val = {}, left = null, right = null) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+/**
+ * 哈夫曼森林
  */
 class Huffman {
 

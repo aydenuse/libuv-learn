@@ -103,26 +103,3 @@ class ConcurrentExecutor {
 }
 
 const concurrentExecutor = new ConcurrentExecutor(5)
-
-
-// const promise = require('bluebird');
-// const test = async () => {
-//     const result = await promise.map([
-//         1000,
-//         1000,
-//         1000,
-//         5000,
-//         1000
-//     ], async (i) => {
-//         return new Promise((resolve) => {
-//             setTimeout(() => {
-//                 console.log(i)
-//                 resolve(i)
-//             }, i, i)
-//         }).then(() => {
-//             return i
-//         })
-//     }, { concurrency: 2 })
-// }
-
-// test()
